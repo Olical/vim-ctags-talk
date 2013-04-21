@@ -1,7 +1,7 @@
 Reveal.initialize({
 	controls: true,
 	progress: true,
-	history: false,
+	history: true,
 	keyboard: true,
 	overview: true,
 	center: true,
