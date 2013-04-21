@@ -52,6 +52,47 @@
 						<p>Google: <a href='http://vim.wikia.com/wiki/Browsing_programs_with_tags'>"vim wiki browsing programs with tags"</a></p>
 					</section>
 				</section>
+
+				<section>
+					<!-- This section is a tad messy... -->
+
+					<section>
+						<h2>What's ctags then?</h2>
+						<ul>
+							<li>sudo apt-get install exuberant-ctags</li>
+							<li>brew install ctags</li>
+						</ul>
+						<aside class='note'>
+							<p>(pain <del>may</del> will vary between platforms)</p>
+						</aside>
+					</section>
+
+					<section>
+						<h2>My first tag file</h2>
+						<code>ctags -Rf ./.tags --exclude=.git ./components</code>
+						<code>
+<pre>!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0	./components/reveal.js/plugin/zoom-js/zoom.js	/^			magnify( scrollOffset.x, scrollOffset.y, 0, 0, 1 );$/;"	r
+1	./components/reveal.js/js/reveal.js	/^		var event = document.createEvent( "HTMLEvents", 1, 2 );$/;"	r
+190	./components/reveal.js/js/reveal.js	/^		if( isPaused() && [66,190,191].indexOf( event.keyCode ) === -1 ) {$/;"	r
+
+Insert 500 lines or so of similar stuff...
+
+zoomFactor	./components/reveal.js/plugin/print-pdf/print-pdf.js	/^page.zoomFactor = 1.5;$/;"	r
+zoomLevel	./components/reveal.js/plugin/zoom-js/zoom.js	/^		zoomLevel: function() {$/;"	r</pre>
+						</code>
+					</section>
+
+					<section>
+						<h2>Make Vim use .tags</h2>
+						<p>set tags+=.tags</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
