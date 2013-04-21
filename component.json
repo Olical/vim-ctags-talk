@@ -6,7 +6,7 @@
 		"node_modules",
 		"components"
 	],
-	"dependencies": [
+	"dependencies": {
 		"reveal.js": "latest"
-	]
+	}
 }
