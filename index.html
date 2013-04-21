@@ -92,6 +92,26 @@ zoomLevel	./components/reveal.js/plugin/zoom-js/zoom.js	/^		zoomLevel: function(
 						<h2>Make Vim use .tags</h2>
 						<p>set tags+=.tags</p>
 					</section>
+
+					<section>
+						<h2>Making it less awkward</h2>
+						<code>
+<pre>command! GenerateTags !ctags -Rf ./.tags --exclude=.git ./components&lt;CR&gt;
+nmap &lt;F5&gt; :GenerateTags&lt;CR&gt;&lt;CR&gt;</pre>
+						</code>
+					</section>
+
+					<section>
+						<h2>But wait, there's more!</h2>
+						<ul>
+							<li>--python-kinds=-i</li>
+							<li>`cat .srclist`</li>
+						</ul>
+						<code>
+<pre>./assets/**/*.js
+./**/*.py</pre>
+						</code>
+					</section>
 				</section>
 			</div>
 		</div>
