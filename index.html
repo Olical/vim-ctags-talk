@@ -96,8 +96,8 @@ zoomLevel	./components/reveal.js/plugin/zoom-js/zoom.js	/^		zoomLevel: function(
 					<section>
 						<h2>Making it less awkward</h2>
 						<code>
-<pre>command! GenerateTags !ctags -Rf ./.tags --exclude=.git ./components&lt;CR&gt;
-nmap &lt;F5&gt; :GenerateTags&lt;CR&gt;&lt;CR&gt;</pre>
+<pre>command! GenerateTags call system('ctags -Rf ./.tags --exclude=.git ./components') | echo
+nmap &lt;F5&gt; :GenerateTags&lt;CR&gt;</pre>
 						</code>
 					</section>
 
